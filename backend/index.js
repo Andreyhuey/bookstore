@@ -40,7 +40,7 @@ app.use("/kittens", kittensRoute);
 async function connectToDatabase() {
   try {
     await mongoose.connect(`${process.env.MONGODBURL}`);
-    app.listen(`${process.env.PORT}`, () => {
+    app.listen(`${process.env.PORT}` || 5000, () => {
       console.log(`App is listening to port: ${process.env.PORT}`);
     });
 

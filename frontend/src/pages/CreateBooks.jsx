@@ -18,7 +18,7 @@ const CreateBooks = () => {
     };
     setLoading(true);
     axios
-      .post("http://localhost:5555/books", data)
+      .post("https://bookstore-sooty-five.vercel.app/books", data)
       .then(() => {
         setLoading(false);
         navigate("/");

@@ -10,7 +10,9 @@ const FindBook = () => {
   const handleSearch = () => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/books/search/${query.toLowerCase()}`)
+      .get(
+        `https://bookstore-sooty-five.vercel.app/books/search/${query.toLowerCase()}`
+      )
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
