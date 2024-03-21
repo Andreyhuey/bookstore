@@ -9,7 +9,7 @@ import { RxAvatar } from "react-icons/rx";
 const Card = ({ book, index }) => {
   return (
     <div
-      className="flex flex-col h-full w-full justify-between border rounded-2xl min-h-max p-6 gap-6"
+      className="flex flex-col h-full w-full justify-between border rounded-2xl p-6 gap-6"
       key={book._id}
     >
       <div className=" w-full flex flex-col gap-6 capitalize">
