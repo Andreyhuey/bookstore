@@ -4,12 +4,12 @@ import { Spinner, BooksCard, BooksTable } from "../components";
 import { Link } from "react-router-dom";
 // icons
 import { MdOutlineAddBox } from "react-icons/md";
-import { FaSearchengin } from "react-icons/fa";
+import { FaSearchengin, FaTable, FaIdCard } from "react-icons/fa";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [showType, setShowType] = useState("table");
+  const [showType, setShowType] = useState("card");
 
   useEffect(() => {
     setLoading(true);
@@ -31,15 +31,17 @@ const Home = () => {
     <div className="bg-slate-800 text-white min-h-screen p-4">
       <div className="flex justify-center items-center gap-x-4">
         <button
-          className="bg-sky-300 hover:bg-sky-600 transition duration-500 ease-in-out hover:scale-125 px-4 py-1 rounded-lg"
+          className="bg-sky-300 hover:bg-sky-600 transition duration-500 ease-in-out hover:scale-125 px-4 py-1 rounded-lg flex gap-1 items-center"
           onClick={() => setShowType("table")}
         >
+          <FaTable />
           Table
         </button>
         <button
-          className="bg-sky-300 hover:bg-sky-600 transition duration-500 ease-in-out hover:scale-125 px-4 py-1 rounded-lg"
+          className="bg-sky-300 hover:bg-sky-600 transition duration-500 ease-in-out hover:scale-125 px-4 py-1 rounded-lg flex gap-1 items-center"
           onClick={() => setShowType("card")}
         >
+          <FaIdCard />
           Card
         </button>
       </div>

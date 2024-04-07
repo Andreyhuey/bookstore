@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Spinner, BackButton } from "../components";
+import moment from "moment";
 
 const ShowBook = () => {
   const [book, setBook] = useState({});
@@ -49,11 +50,11 @@ const ShowBook = () => {
           </div>
           <div>
             <span className="text-xl mr-4 text-gray-500">Create Time</span>
-            <span>{new Date(book.createdAt).toString()}</span>
+            <span>{moment(book.createdAt).format("Do MMM YYYY, h:mm a")}</span>
           </div>
           <div>
             <span className="text-xl mr-4 text-gray-500">Last Update Time</span>
-            <span>{new Date(book.updatedAt).toString()}</span>
+            <span>{moment(book.updatedAt).format("Do MMM YYYY, h:mm a")}</span>
           </div>
         </div>
       </div>
